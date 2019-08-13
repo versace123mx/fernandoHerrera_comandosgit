@@ -9,6 +9,11 @@ verificar la configuracion global
 git config --global -e
 
 
+Existen 3 area en un git
+1) area de tabajo, cuando realizamos cambios de un archivo y ejecutamos en cosola git status, este archivo se mostrara en color rojo indicando que estan un archivo modificado en el area de trabajo.
+2) stegin, stegin es el area don se encuentran los archivos agregados del area de trabajo asia stegin
+3) commit, esta area es donde se realiza una imagen del codigo con las modificaciones correspondientes por si requermis regresar a este punto y verifiquemos los archivos modificados.
+
 como iniciar un repositorio de git
 ir al directorio donde tenemos el proyecto y ejecutar
 git init
@@ -27,14 +32,28 @@ para ejecutar un commit hacemos lo siguiente
 git commit -m 'mensaje del commit'
 
 
-cuando ejecutemos git status este nos indicara que estamos en un directorio limpio sin cambios, si realizamos nuevos cambios entonces ejecutamos git status y este nos mostrara en color rojo los archivos que han sido modificados, y seguimos el mismo proces de agregarlo al area de trabajo y despues commitear el trabajo.
+cuando ejecutemos git status este nos indicara que estamos en un directorio limpio sin cambios, si realizamos nuevos cambios entonces ejecutamos git status y este nos mostrara en color rojo los archivos que han sido modificados, y seguimos el mismo proces de agregarlo al area de trabajo y despues a stegin para posterior hacer un commit de los cambios.
 No es recomendable hacer commit por cada ajuste menor, es recomendable hacer commit pero por tareas terminadas.
 
 Hay veces que hay harchivos que no queremos agregar o no lo queremos en un commit para ello ejecutamos
 git checkout nombre_del_archivo
 pero hay veces que son demaciados archivos o no queremos ninguno para ello podemos utilizar
-git checkout -- . y este comando nos desagregara todos los archivos que no esten en el area de agregado color verde
+git checkout -- . y este comando nos desagregara todos los archivos que estan en el area de trabajo
 
+Agregar todos los archivos de una extencion, de nuestra area de trabajo a stegin
+git add *.png
 
+podemos excluir archivos que estan en el area de stegin esto nos devolvera todo lo que indicamos al area de trabajo
+git reset HEAD nombre del archivo
+git reset HEAT *.extencion o carpeta
+
+podemos descartar cambios de el area de trabajo
+git checkout -- nombre del archivo
+git checkout -- . todos
+git checkout -- *.exencion
+
+Nota: si tenemos archivos en el area de trabajo y en el area de stegin al mismo tiempo, podemos hacer commit de los archivos que estan en stegin y tambien podemos descartar cambios en el directorio de trabajo ya que son areas distintas tanto stegin es un area como el working directory es otro.
 
 git config core.autocrlf true
+
+
