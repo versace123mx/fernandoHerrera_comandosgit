@@ -1,0 +1,40 @@
+Curso de Git Fernando Herrera
+
+Configuracion de git
+
+git config --global user.name 'versace123mx'
+git config --global user.email 'versace123mx@gmail.com'
+
+verificar la configuracion global
+git config --global -e
+
+
+como iniciar un repositorio de git
+ir al directorio donde tenemos el proyecto y ejecutar
+git init
+
+ahora podemos ejecutar git status el cual nos mostrara un status de nuestros archivos de git.
+en este caso como es la primera vez git nos mostrara todos los archivos en color rojo indicando esto que git no sigue estos archivos todavia para ello tenemos que agregarlos para que git los pueda trackear o seguir.
+para ello utilizamos 
+git add .
+con este comando git agregara todos a su area de trabajo y cualquier modificacion a estos archivos git nos lo indicara cuando hagamos un git status.
+
+si ahora hacemos un git status todos los archivos nos aparareceran en color verde esto quiere decir que git los tiene ahora en seguimiento o trakeados.
+
+un commit es una especie de snap shot o captura de un momento en el cual se encontraba el codigo en ese comento. y podemos mediante ello tener un historial del proceso de nuestros ajustes.
+
+para ejecutar un commit hacemos lo siguiente
+git commit -m 'mensaje del commit'
+
+
+cuando ejecutemos git status este nos indicara que estamos en un directorio limpio sin cambios, si realizamos nuevos cambios entonces ejecutamos git status y este nos mostrara en color rojo los archivos que han sido modificados, y seguimos el mismo proces de agregarlo al area de trabajo y despues commitear el trabajo.
+No es recomendable hacer commit por cada ajuste menor, es recomendable hacer commit pero por tareas terminadas.
+
+Hay veces que hay harchivos que no queremos agregar o no lo queremos en un commit para ello ejecutamos
+git checkout nombre_del_archivo
+pero hay veces que son demaciados archivos o no queremos ninguno para ello podemos utilizar
+git checkout -- . y este comando nos desagregara todos los archivos que no esten en el area de agregado color verde
+
+
+
+git config core.autocrlf true
