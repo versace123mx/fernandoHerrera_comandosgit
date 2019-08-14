@@ -84,6 +84,7 @@ Como regresarnos a un commit especifico y que ese se quede como master eliminand
 1) git reset --mixed has del commit a donde nos moveremos
 2) git reset --hard has del commit donde nos queremos quedar como head
 
-Nota: despues de hacer rest --hard y a un que hagamos git log o git status los cambios despues de este punto de la historia ya no aparecen, pero hay una forma de encontrarlos y volver a recuperarlos.
+Nota: despues de hacer git rest --hard y a un que hagamos git log o git status los cambios despues de este punto de la historia ya no aparecen, pero hay una forma de encontrarlos y volver a recuperarlos.
 git reflog vemos los cambios que hemos realizado y para regresar a un punto especifico cogemos el has
 git reset --hard has a donde nos vamos a mover ahora
+
