@@ -75,6 +75,15 @@ git commit --amend -m 'mensaje a cambiar'
 
 Supongamos que tenemos el ultimo commit que falto aplicarle ajustes, aplicamos los siguientes cambios y esto lo que nos hara sera eliminar el ultimo commit y regresarnos todos los cambios a como estaban antes del ultimo commit osea que los cambios echo apareceran como en el area de trabajo para comitear.
 Deahacer un commit y aplicar cambios en ese commit
-1) git rest --soft HEAD^
+1) git rest --soft HEAD^  nos regresa a un commit antes del ultimo para hacer los ajustes pertinentes
 2) hacer los cambios pertinenetes
 3) hacer commit
+
+
+Como regresarnos a un commit especifico y que ese se quede como master eliminando los commits que esten desdepues de este.
+1) git reset --mixed has del commit a donde nos moveremos
+2) git reset --hard has del commit donde nos queremos quedar como head
+
+Nota: despues de hacer rest --hard y a un que hagamos git log o git status los cambios despues de este punto de la historia ya no aparecen, pero hay una forma de encontrarlos y volver a recuperarlos.
+git reflog vemos los cambios que hemos realizado y para regresar a un punto especifico cogemos el has
+git reset --hard has a donde nos vamos a mover ahora
