@@ -72,3 +72,9 @@ git diff --staged
 
 Como enmendar o reparar el titulo del ultimo commit
 git commit --amend -m 'mensaje a cambiar'
+
+Supongamos que tenemos el ultimo commit que falto aplicarle ajustes, aplicamos los siguientes cambios y esto lo que nos hara sera eliminar el ultimo commit y regresarnos todos los cambios a como estaban antes del ultimo commit osea que los cambios echo apareceran como en el area de trabajo para comitear.
+Deahacer un commit y aplicar cambios en ese commit
+1) git rest --soft HEAD^
+2) hacer los cambios pertinenetes
+3) hacer commit
