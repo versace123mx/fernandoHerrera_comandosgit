@@ -57,3 +57,7 @@ Nota: si tenemos archivos en el area de trabajo y en el area de stegin al mismo 
 git config core.autocrlf true
 
 
+como ver los comits realizado
+git log
+git log --oneline
+git log --oneline  --decorate --all --graph   para ver las ramas y de una forma elegante todas las ramas
