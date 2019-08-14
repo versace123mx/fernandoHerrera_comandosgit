@@ -61,3 +61,8 @@ como ver los comits realizado
 git log
 git log --oneline
 git log --oneline  --decorate --all --graph   para ver las ramas y de una forma elegante todas las ramas
+
+
+
+Como ver los cambios de un archivo
+git diff
