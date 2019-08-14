@@ -70,4 +70,5 @@ git diff
 Como ver los cambios que estan en el area de stegin pero aun no han sido commiteados
 git diff --staged
 
-probando git checkout
+Como enmendar o reparar el titulo del ultimo commit
+git commit --amend -m 'mensaje a cambiar'
