@@ -48,7 +48,6 @@ git reset HEAD nombre del archivo
 git reset HEAT *.extencion o carpeta
 
 podemos descartar cambios de el area de trabajo
-git reset nombre del archivo
 git checkout -- nombre del archivo
 git checkout -- . todos
 git checkout -- *.exencion
@@ -71,3 +70,4 @@ git diff
 Como ver los cambios que estan en el area de stegin pero aun no han sido commiteados
 git diff --staged
 
+probando git checkout
