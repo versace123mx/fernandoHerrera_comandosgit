@@ -110,3 +110,18 @@ git branch nombrederama   esto nos crea una rama pero no nos mueve hay que mover
 
 como movernos entre ramas
 git checkout nombrerama
+
+git branch nos dice cuales son las ramas que hay
+
+git diff ramaactual ramamaster  nos dice las diferencias entre las ramas
+
+como unir una rama
+1) la rama que se unira depende en que branch estemos
+si estamos fuera de master y queremos unir master con esa rama hacemos lo siguiente
+estar en la rama y git merge master  de esta forma unimos a nuestra rama actual lo que hay en master
+master seguira con los ultimos cambio mas no con los cambios de la rama actual, pero de esta forma nos aseguramos que en esta union no existan conflicto y haci poder luego unir master con la rama de modificaciones
+
+borrar rama
+git branch -d nombrerama
+git branch -D nombrerama  este es una eliminacion fuerte si es que el anterior comando no nos permite borrar la rama
+
