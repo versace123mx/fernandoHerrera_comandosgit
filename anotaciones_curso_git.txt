@@ -146,13 +146,19 @@ git stash save 'mensaje de donde estamos trabajando' el stash es una forma que n
 
 ver lo que hay en stash
 git stash list
+git show stash nos muestra detalle y ajustes que tiene el stash
+git show stash@{5} nos muestra informacion detallada del stash 5
 
-git stash pop aplica el ultimo stash al area de trabajo actual
+git stash pop aplica el ultimo stash al area de trabajo actual y lo borra siempre y cuando no aya conclictos, si hay conflictos no borra el stash
 
-git stash apply stash@{1} aplica el stash numero 1 al area de trabajo actual
+git stash apply stash@{1} aplica el stash numero 1 al area de trabajo actual pero no borra el stash como pop
 
 git stash apply has nos permite recuperar un stash borrado, siempre y cuadno tengamos el has, por ello despues de borrar un stash erroneamente es recomendable no cerrar la ventana y copiar el has posteriormente aplicarlo y listo
 
 como borrar un stash
 git stash drop 1  esto borrara el stash 1
-cambio 
+git stash drop stash@{1} borramos el stash 1
+git stash drop elimina el primer stash de la lista
+
+git stash clear borra todo lo que este en el stash
+
