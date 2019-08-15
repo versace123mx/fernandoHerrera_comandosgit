@@ -88,3 +88,19 @@ Nota: despues de hacer git rest --hard y a un que hagamos git log o git status l
 git reflog vemos los cambios que hemos realizado y para regresar a un punto especifico cogemos el has
 git reset --hard has a donde nos vamos a mover ahora
 
+
+
+renombrar archivo
+git mv nombreactual nombre_despues
+realizar commit para efectuar los cambios
+
+eliminar archivo
+git rm nombrearchivo
+realizar commit para efectuar los cambios
+
+como ignorar archivos que no sean trakeados por git
+crear un archivo .gitignore
+en ese archivo cargar los nombre de los archivos que no queremos que git siga
+podemos hacer algo como *.log esto dice que todos los archivos .log no los traque
+el .gitignore si debe de ser traqueado por que es el archivo que sabe cuales archivos no seran trakeados
+
