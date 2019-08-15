@@ -170,3 +170,8 @@ con rebasar a la rama maestro sabiendo que hay cambios ahi que queremos en la ot
 3) git rebase master con esto nos ponemos a la cabeza de master y traemos todos los datos de master
 4) trabajamos en la nueva rama y luego mezclamos a master y no tendremos conflicto siempre y cuando no se toquen las mismas lineas
 5) ahora las dos ramas estan a la par
+
+ventajas de usar rebase.
+en una cituacion donde estemos en master, pero el equipo esta subiendo constantemente cambios a master, nosotros nos quedariasmo muy atras, para ello podriamos utilizar un merge y estar al dia, solo que al hacer merge se crearia nuevos commits de los merge, para evitar esto podemos utilizar rebase, que de los commit que tenemos los hace a un lado de forma temporal y luego actualiza master con nuestra rama, seguido regresa esos commits temporales a la rama donde estamos trabajando, cuando estemos listos nos pasamos a marter y mezclamos, pero ya no tendremos que generar un nuevo commit de union.
+
+
