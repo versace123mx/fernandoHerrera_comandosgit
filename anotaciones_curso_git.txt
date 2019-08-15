@@ -206,3 +206,8 @@ con rebase tambien podemos cambiar el mensaje del commit
 2) en el commit agregarle la letra r
 3) en la siguiente pantalla agregar el mensaje
 4) esto es diferente a git mv nombreactual nombre_despues ya que no tenemos que crear un nuevo commit como se hace con el mv
+
+
+
+
+git reset HEAD^ saca los ultimos archivos modificados del commit y los pone en el area de trabajo
