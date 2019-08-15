@@ -125,3 +125,33 @@ borrar rama
 git branch -d nombrerama
 git branch -D nombrerama  este es una eliminacion fuerte si es que el anterior comando no nos permite borrar la rama
 
+Creando tags
+git tag nombredeltag
+
+como ver los tags
+git tag
+
+borrar tag
+git tag -d nombredeltagaborrar
+
+
+crear un tag en algun commit especifico
+git tag -a v1.0.0 hascorto -m'mensaje del tag'
+
+
+ver los tags de una forma mas explcita
+git show nombredeltag
+
+git stash save 'mensaje de donde estamos trabajando' el stash es una forma que nos da git para mantener salvado los cambios que teniamos y volver a tener la rama como estaba la ultima vez sin esos cambios que estan en el area de trabajo. posteriormente podemos hacer otras cosas y si mas adelante queremos recuperar ese stash se puede recuperar.
+
+ver lo que hay en stash
+git stash list
+
+git stash pop aplica el ultimo stash al area de trabajo actual
+
+git stash apply stash@{1} aplica el stash numero 1 al area de trabajo actual
+
+git stash apply has nos permite recuperar un stash borrado, siempre y cuadno tengamos el has, por ello despues de borrar un stash erroneamente es recomendable no cerrar la ventana y copiar el has posteriormente aplicarlo y listo
+
+como borrar un stash
+git stash drop 1  esto borrara el stash 1 
