@@ -104,3 +104,9 @@ en ese archivo cargar los nombre de los archivos que no queremos que git siga
 podemos hacer algo como *.log esto dice que todos los archivos .log no los traque
 el .gitignore si debe de ser traqueado por que es el archivo que sabe cuales archivos no seran trakeados
 
+generar una rama
+git checkout -b   y esto nos crea una rama y nos mueve a esa rama
+git branch nombrederama   esto nos crea una rama pero no nos mueve hay que movernos a esa rama
+
+como movernos entre ramas
+git checkout nombrerama
