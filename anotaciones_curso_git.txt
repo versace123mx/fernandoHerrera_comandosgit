@@ -154,4 +154,5 @@ git stash apply stash@{1} aplica el stash numero 1 al area de trabajo actual
 git stash apply has nos permite recuperar un stash borrado, siempre y cuadno tengamos el has, por ello despues de borrar un stash erroneamente es recomendable no cerrar la ventana y copiar el has posteriormente aplicarlo y listo
 
 como borrar un stash
-git stash drop 1  esto borrara el stash 1 
+git stash drop 1  esto borrara el stash 1
+cambio 
