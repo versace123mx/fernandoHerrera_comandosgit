@@ -211,3 +211,9 @@ con rebase tambien podemos cambiar el mensaje del commit
 
 
 git reset HEAD^ saca los ultimos archivos modificados del commit y los pone en el area de trabajo
+
+git pull para traer los cambios que esten en master
+
+git push origin master para enviar mis cambios
+
+git fetch trae los cambios como pull pero no hace el merge instantaneo ya que verifica como que no haya problemas y despues los une, encambio pull inmediatamente intenta hacer el merge
