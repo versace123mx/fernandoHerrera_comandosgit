@@ -163,3 +163,10 @@ git stash drop elimina el primer stash de la lista
 git stash clear borra todo lo que este en el stash
 
 ahora trabajaremos con rebase
+
+con rebasar a la rama maestro sabiendo que hay cambios ahi que queremos en la otra rama
+1) hay cambios en master
+2) estamos en otra rama paralela a master y trabajamos en ella pero master ya tiene nuevos cambios que no hay en esta otra rama.
+3) git rebase master con esto nos ponemos a la cabeza de master y traemos todos los datos de master
+4) trabajamos en la nueva rama y luego mezclamos a master y no tendremos conflicto siempre y cuando no se toquen las mismas lineas
+
