@@ -26,6 +26,9 @@ con este comando git agregara todos a su area de trabajo y cualquier modificacio
 
 si ahora hacemos un git status todos los archivos nos aparareceran en color verde esto quiere decir que git los tiene ahora en seguimiento o trakeados.
 
+mostrar git de una forma bonita
+git log --all --oneline --graph --decorate
+
 un commit es una especie de snap shot o captura de un momento en el cual se encontraba el codigo en ese comento. y podemos mediante ello tener un historial del proceso de nuestros ajustes.
 
 para ejecutar un commit hacemos lo siguiente
@@ -93,6 +96,7 @@ git reset --hard has a donde nos vamos a mover ahora
 renombrar archivo
 git mv nombreactual nombre_despues
 realizar commit para efectuar los cambios
+esto lo que hace es elimina un archivo y crea otro nuevo ya que asi lo toma git al igual que linux y como es un archivo nuevo hay que hacer git add y git commit  a diferencia del git rebase que se ve mas alla abajo en otras lineas lo explicamos
 
 eliminar archivo
 git rm nombrearchivo
@@ -175,3 +179,30 @@ ventajas de usar rebase.
 en una cituacion donde estemos en master, pero el equipo esta subiendo constantemente cambios a master, nosotros nos quedariasmo muy atras, para ello podriamos utilizar un merge y estar al dia, solo que al hacer merge se crearia nuevos commits de los merge, para evitar esto podemos utilizar rebase, que de los commit que tenemos los hace a un lado de forma temporal y luego actualiza master con nuestra rama, seguido regresa esos commits temporales a la rama donde estamos trabajando, cuando estemos listos nos pasamos a marter y mezclamos, pero ya no tendremos que generar un nuevo commit de union.
 
 
+como unir dos commit para que sean 1 ya que muchas veces hacemos varios cambios al mismo archivo con diferentes commit, para que esto no se vea feo con muchos commits hacemos un git squash que es como unir en un solo commit
+1) git rebase -i HEAD~4  hacemos un rebase, pantalla interactiva -i de los ultimos 4 commits que estan a la cabeza
+2) nos aparecera una pantalla donde tenemos que poner que commits se uniran por lo regular al primero se le coloca la letra s, salimos y guardamos
+3) aparecera otra pantalla donde nos pedira ingresar un mensaje para esa union de archivos
+rebase squash
+Nota: cuando estamos en la consola interactiva y vamos unir dos commits en este caso escogimos 4 pero solo modificaremos el ultimo y el antepenultimo
+Ejemplo:
+pick 445455 commit 4 
+pick 545454 commit 3
+pick 25fddd commit 2
+pick df44ff commit 1
+
+al commit df44ff en lugar de llevar pick le ponemos una s y al 25fddd le anteponemos una p esto quiere decir que uniremos el commit df44ff y 25fddd
+
+si pusieramos otros s a otros commit entontes se agregaria ese y el anterior en un solo commit ahi hay que tener cuidado de que es lo que uniremos.
+
+pick 445455 commit 4 
+pick 545454 commit 3
+p 25fddd commit 2
+s df44ff commit 1
+
+
+con rebase tambien podemos cambiar el mensaje del commit 
+1) git rebase -i HEAD~1
+2) en el commit agregarle la letra r
+3) en la siguiente pantalla agregar el mensaje
+4) esto es diferente a git mv nombreactual nombre_despues ya que no tenemos que crear un nuevo commit como se hace con el mv
