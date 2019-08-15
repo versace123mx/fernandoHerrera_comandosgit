@@ -162,3 +162,4 @@ git stash drop elimina el primer stash de la lista
 
 git stash clear borra todo lo que este en el stash
 
+ahora trabajaremos con rebase
