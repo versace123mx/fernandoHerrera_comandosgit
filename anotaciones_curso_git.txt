@@ -75,6 +75,7 @@ git diff --staged
 
 Como enmendar o reparar el titulo del ultimo commit
 git commit --amend -m 'mensaje a cambiar'
+git commit --amend
 
 Supongamos que tenemos el ultimo commit que falto aplicarle ajustes, aplicamos los siguientes cambios y esto lo que nos hara sera eliminar el ultimo commit y regresarnos todos los cambios a como estaban antes del ultimo commit osea que los cambios echo apareceran como en el area de trabajo para comitear.
 Deahacer un commit y aplicar cambios en ese commit
@@ -217,6 +218,3 @@ git pull para traer los cambios que esten en master
 git push origin master para enviar mis cambios
 
 git fetch trae los cambios como pull pero no hace el merge instantaneo ya que verifica como que no haya problemas y despues los une, encambio pull inmediatamente intenta hacer el merge
-
-como cambiar el mensaje de commit
-git commit --amend
