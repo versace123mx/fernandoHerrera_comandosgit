@@ -217,3 +217,6 @@ git pull para traer los cambios que esten en master
 git push origin master para enviar mis cambios
 
 git fetch trae los cambios como pull pero no hace el merge instantaneo ya que verifica como que no haya problemas y despues los une, encambio pull inmediatamente intenta hacer el merge
+
+como cambiar el mensaje de commit
+git commit --amend
