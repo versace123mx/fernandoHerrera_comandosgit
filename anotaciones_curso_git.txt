@@ -128,8 +128,12 @@ master seguira con los ultimos cambio mas no con los cambios de la rama actual, 
 
 borrar rama
 git branch -d nombrerama
-git branch -D nombrerama  este es una eliminacion fuerte si es que el anterior comando no nos permite borrar la rama
+git branch -D nombrerama  este es una eliminacion fuerte si es que el anterior comando no nos permite borrar la rama, si no se puede eliminar es por que no se ha mezclado con ningun otra rama y por ello no permite eliminar, pero si queremos eliminar por que ese codigo digamos ya no sera parte de nuestra aplicacion por que hera un ejemplo, pues la podemos eliminar con -d y si no nos deja entonces con -D
 
+
+Existen dos tipos de tags
+1) un tag con nombre
+2) un tag que se le pone -a para colocar un mensaje, este se utiliza para las verciones
 Creando tags
 git tag nombredeltag
 
@@ -218,3 +222,12 @@ git pull para traer los cambios que esten en master
 git push origin master para enviar mis cambios
 
 git fetch trae los cambios como pull pero no hace el merge instantaneo ya que verifica como que no haya problemas y despues los une, encambio pull inmediatamente intenta hacer el merge
+
+
+git brand --merge  nos indica que ramas han sido mezcladas a la rama actual
+ejemplo estamos en master y podemos ver que ramas se mezclo a master.
+
+como recuperar una rama borrada
+1) ver en que parte se borro, podemos hacer un git reflog y extraer el has
+2) movernos a ese has y desde ahi generar otra rama que contenga los archivos de dicha rama que eliminamos, por lo tanto la nueva rama tiene los archivos que se eliminaron en la vieja rama y podemos trabajar con estos datos.
+
