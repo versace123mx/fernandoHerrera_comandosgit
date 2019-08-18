@@ -231,3 +231,11 @@ como recuperar una rama borrada
 1) ver en que parte se borro, podemos hacer un git reflog y extraer el has
 2) movernos a ese has y desde ahi generar otra rama que contenga los archivos de dicha rama que eliminamos, por lo tanto la nueva rama tiene los archivos que se eliminaron en la vieja rama y podemos trabajar con estos datos.
 
+
+
+cuando trabajamos con un equipo remoto
+1) creamos un fork de el repo para que tengamos acceso a ese repo
+2) clonamos el repo en nuestro equipo
+3) de master creamos otra rama
+4) realizamos nuestros cambios y pushamos a la rama que creamos
+5) hacemos un pull request
